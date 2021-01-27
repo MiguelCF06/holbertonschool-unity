@@ -12,9 +12,16 @@ public class PlayerController : MonoBehaviour
   public float jumpHeight = 1.5f;
   public float gravityValue = -9.81f;
 
-  void Update()
+  Vector3 originalPos;
+  void Awake()
+  {
+    originalPos = new Vector3(transform.position.x, transform.position.y + 20, transform.position.z);
+  }
+
+  void FixedUpdate()
   {
     Move();
+    CheckInfiniteFalling();
   }
 
   void Move()
@@ -37,6 +44,13 @@ public class PlayerController : MonoBehaviour
 
     playerVelocity.y += gravityValue * Time.deltaTime;
     controller.Move(playerVelocity * Time.deltaTime);
+  }
 
+  void CheckInfiniteFalling()
+  {
+    if (transform.position.y <= -20)
+    {
+      transform.position = originalPos;
+    }
   }
 }
