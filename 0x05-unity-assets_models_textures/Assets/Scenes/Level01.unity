@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 760598386}
   - component: {fileID: 760598385}
   - component: {fileID: 760598384}
+  - component: {fileID: 760598388}
   m_Layer: 0
   m_Name: WinFlag
   m_TagString: Untagged
@@ -1058,7 +1059,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760598383}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.7
   m_Height: 6
@@ -1125,6 +1126,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760598388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760598383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372415f9eed2b624fbe939cc6de5fd44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &788784090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,11 +3574,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8073622966326796075, guid: dfe81341e5779544c946a3e086332171,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -8073622966326796075, guid: dfe81341e5779544c946a3e086332171,
         type: 3}
       propertyPath: timerText
