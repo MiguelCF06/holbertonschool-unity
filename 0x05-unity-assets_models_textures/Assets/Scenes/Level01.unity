@@ -9587,19 +9587,6 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 719701854}
-    - target: {fileID: 43920460, guid: dfe81341e5779544c946a3e086332171, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 43920460, guid: dfe81341e5779544c946a3e086332171, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2040666557294250372, guid: dfe81341e5779544c946a3e086332171,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8329988032102348235, guid: dfe81341e5779544c946a3e086332171,
         type: 3}
       propertyPath: m_RootOrder

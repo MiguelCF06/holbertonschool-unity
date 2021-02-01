@@ -12,7 +12,6 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         rotation.y = transform.eulerAngles.y;
-        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -24,10 +23,18 @@ public class CameraController : MonoBehaviour
 
     void CameraRotation()
     {
-        rotation.y += Input.GetAxis("Mouse X") * lookSpeed;
-        rotation.x -= Input.GetAxis("Mouse Y") * lookSpeed;
+        float horizontalRotationPlayer = Input.GetAxis("Mouse X") * lookSpeed;
+        rotation.y = Input.GetAxis("Mouse X") * lookSpeed;
+        rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
         rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
-        playerCameraParent.localRotation = Quaternion.Euler(rotation.x, 0, 0);
+
+        float y = Mathf.Round(transform.eulerAngles.y * lookSpeed);
+        Vector3 cameraEulerAngles = new Vector3(0, y, 0);
+
+        playerCameraParent.parent.eulerAngles = cameraEulerAngles;
+        playerCameraParent.localRotation = Quaternion.Euler(rotation.x, rotation.y, 0);
+        
         transform.eulerAngles = new Vector2(0, rotation.y);
+        transform.LookAt(playerCameraParent.parent.transform);
     }
 }
