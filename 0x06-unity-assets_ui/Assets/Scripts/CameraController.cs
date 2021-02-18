@@ -14,6 +14,11 @@ public class CameraController : MonoBehaviour
     {
         rotation.y = transform.eulerAngles.y;
         Cursor.lockState = CursorLockMode.Locked;
+
+        if (PlayerPrefs.HasKey("InvertY"))
+        {
+            isInverted = PlayerPrefs.GetInt("InvertY") == 0 ? false : true;
+        }
     }
 
     // Update is called once per frame
