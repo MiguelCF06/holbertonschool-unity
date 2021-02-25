@@ -28,6 +28,7 @@ public class OptionsMenu : MonoBehaviour
     public void Apply()
     {
         PlayerPrefs.SetInt("InvertY", this.GetComponentInChildren<Toggle>().isOn ? 1 : 0);
+        SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
     }
 
     public void Back()
