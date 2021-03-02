@@ -227,11 +227,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 8329988032102348239}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 0
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.08088553, z: 0}
 --- !u!143 &2003399259184456245
 CharacterController:
   m_ObjectHideFlags: 0
@@ -243,10 +243,10 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.8
+  m_Height: 1.7
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.2
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2003399259184456245}
+  anim: {fileID: 1601352785}
   playerSpeed: 8
   verticalSpeed: 0
   jumpHeight: 2.5
@@ -291,7 +292,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8565625669409576034}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: ea4a31b12d557504c9b269de86d108cb, type: 3}
   m_Controller: {fileID: 9100000, guid: e2508d47c67c8054a857458d8a234688, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -321,7 +322,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5a2470b1bba02584f89479ad246f56e6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.96
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a2470b1bba02584f89479ad246f56e6,
         type: 3}
