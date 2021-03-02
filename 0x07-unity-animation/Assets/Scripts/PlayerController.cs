@@ -42,14 +42,18 @@ public class PlayerController : MonoBehaviour
     if (groundedPlayer && playerVelocity.y < 0)
     {
       playerVelocity.y = 0f;
+      anim.SetBool("IsJumping", false);
     }
 
     Vector3 move = transform.forward * verticalMove + transform.right * horizontalMove;
     controller.Move(playerSpeed * Time.deltaTime * move);
 
     if (Input.GetButtonDown("Jump") && groundedPlayer)
+    {
       playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-
+      anim.SetBool("IsJumping", true);
+    }
+    
     playerVelocity.y += gravityValue * Time.deltaTime;
     controller.Move(playerVelocity * Time.deltaTime);
   }
