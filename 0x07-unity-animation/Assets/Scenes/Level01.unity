@@ -1501,6 +1501,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 469602400}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &470477250 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1601352785, guid: dfe81341e5779544c946a3e086332171,
+    type: 3}
+  m_PrefabInstance: {fileID: 8329988033218361775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &487776882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9727,6 +9733,16 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 9000000, guid: ea4a31b12d557504c9b269de86d108cb, type: 3}
+    - target: {fileID: 2003399259184456245, guid: dfe81341e5779544c946a3e086332171,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723172185011088020, guid: dfe81341e5779544c946a3e086332171,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 470477250}
     - target: {fileID: 8329988032102348235, guid: dfe81341e5779544c946a3e086332171,
         type: 3}
       propertyPath: m_RootOrder
@@ -9785,7 +9801,7 @@ PrefabInstance:
     - target: {fileID: 8329988032102348238, guid: dfe81341e5779544c946a3e086332171,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.06
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8329988032102348239, guid: dfe81341e5779544c946a3e086332171,
         type: 3}

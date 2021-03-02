@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
   public CharacterController controller;
+  public Animator anim;
   private bool groundedPlayer;
   private Vector3 playerVelocity;
   public float playerSpeed = 6.0f;
@@ -20,6 +21,14 @@ public class PlayerController : MonoBehaviour
 
   void FixedUpdate()
   {
+    if (controller.isGrounded && (Input.GetButton("Horizontal") || Input.GetButton("Vertical")))
+		{
+			anim.SetBool("Running", true);
+		}
+		else
+		{
+			anim.SetBool("Running", false);
+		}
     Move();
     CheckInfiniteFalling();
   }
@@ -37,7 +46,6 @@ public class PlayerController : MonoBehaviour
 
     Vector3 move = transform.forward * verticalMove + transform.right * horizontalMove;
     controller.Move(playerSpeed * Time.deltaTime * move);
-
 
     if (Input.GetButtonDown("Jump") && groundedPlayer)
       playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
