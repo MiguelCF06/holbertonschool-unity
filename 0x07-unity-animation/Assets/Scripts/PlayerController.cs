@@ -61,10 +61,10 @@ public class PlayerController : MonoBehaviour
 
   void CheckInfiniteFalling()
   {
-    if (transform.position.y <= -5)
+    if (transform.position.y <= -10)
     {
       anim.SetBool("Falling", true);
-      if (transform.position.y <= -30)
+      if (transform.position.y <= -60)
       {
         transform.position = originalPos;
       }
