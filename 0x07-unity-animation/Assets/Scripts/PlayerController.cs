@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
       playerVelocity.y = 0f;
       anim.SetBool("IsJumping", false);
+      anim.SetBool("Falling", false);
     }
 
     Vector3 move = transform.forward * verticalMove + transform.right * horizontalMove;
@@ -60,9 +61,13 @@ public class PlayerController : MonoBehaviour
 
   void CheckInfiniteFalling()
   {
-    if (transform.position.y <= -20)
+    if (transform.position.y <= -5)
     {
-      transform.position = originalPos;
+      anim.SetBool("Falling", true);
+      if (transform.position.y <= -30)
+      {
+        transform.position = originalPos;
+      }
     }
   }
 }
