@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WinTrigger : MonoBehaviour
 {
     [SerializeField] GameObject winScreen;
+    [SerializeField] AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class WinTrigger : MonoBehaviour
             winScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             other.GetComponent<Timer>().Win();
+            audioSource.Stop();
         }
     }
 }

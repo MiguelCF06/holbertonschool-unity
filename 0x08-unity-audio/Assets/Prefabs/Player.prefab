@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 2003399259184456245}
   - component: {fileID: 5723172185011088020}
   - component: {fileID: -8073622966326796075}
+  - component: {fileID: 1440155618}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -226,10 +227,10 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8329988032102348239}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
   m_Radius: 0.5
-  m_Height: 0
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0.08088553, z: 0}
 --- !u!143 &2003399259184456245
@@ -268,6 +269,7 @@ MonoBehaviour:
   verticalSpeed: 0
   jumpHeight: 2.5
   gravityValue: -25
+  landingClip: {fileID: 8300000, guid: 638d4261f0c9d1f4bb953c7f1d57a28a, type: 3}
 --- !u!114 &-8073622966326796075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,25 +285,103 @@ MonoBehaviour:
   finalTimeText: {fileID: 0}
   timerText: {fileID: 0}
   time: 0
---- !u!95 &1601352785
-Animator:
-  serializedVersion: 3
+--- !u!82 &1440155618
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8565625669409576034}
+  m_GameObject: {fileID: 8329988032102348239}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ea4a31b12d557504c9b269de86d108cb, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2508d47c67c8054a857458d8a234688, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -3079278763026455048, guid: 91e3f1995ed090c4e92dda506e4a37d6,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!82 &1262140029
 AudioSource:
   m_ObjectHideFlags: 0
@@ -399,6 +479,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1601352785
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8565625669409576034}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ea4a31b12d557504c9b269de86d108cb, type: 3}
+  m_Controller: {fileID: 9100000, guid: e2508d47c67c8054a857458d8a234688, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1262140028
 MonoBehaviour:
   m_ObjectHideFlags: 0
