@@ -4524,6 +4524,18 @@ PrefabInstance:
       objectReference: {fileID: 823441039}
     - target: {fileID: 4595659102412837296, guid: 96e399b963224aa4fb912ee824a105a8,
         type: 3}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: -8513042337869095214, guid: 91e3f1995ed090c4e92dda506e4a37d6,
+        type: 2}
+    - target: {fileID: 4595659102412837296, guid: 96e399b963224aa4fb912ee824a105a8,
+        type: 3}
+      propertyPath: unpaused
+      value: 
+      objectReference: {fileID: 24500006, guid: 91e3f1995ed090c4e92dda506e4a37d6,
+        type: 2}
+    - target: {fileID: 4595659102412837296, guid: 96e399b963224aa4fb912ee824a105a8,
+        type: 3}
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 121907991}

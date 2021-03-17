@@ -3,7 +3,12 @@ guid: 69682042335ae3e498458f549ea0f3f4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pauseCanvas: {instanceID: 0}
+  - time: {instanceID: 0}
+  - paused: {fileID: -8513042337869095214, guid: 91e3f1995ed090c4e92dda506e4a37d6,
+      type: 2}
+  - unpaused: {fileID: 24500006, guid: 91e3f1995ed090c4e92dda506e4a37d6, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
