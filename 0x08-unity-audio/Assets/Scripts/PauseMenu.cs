@@ -6,10 +6,10 @@ using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
-      [SerializeField] GameObject pauseCanvas;
-      [SerializeField] Timer time;
       [SerializeField] AudioMixerSnapshot paused;
       [SerializeField] AudioMixerSnapshot unpaused;
+      [SerializeField] GameObject pauseCanvas;
+      [SerializeField] Timer time;
       bool isPaused;
 
       void Update()
@@ -33,7 +33,7 @@ public class PauseMenu : MonoBehaviour
             isPaused = true;
             pauseCanvas.SetActive(true);
             Time.timeScale = 0f;
-            Lowpass();
+            paused.TransitionTo(.01f);
       }
 
       public void Resume()
@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
             pauseCanvas.SetActive(false);
             Time.timeScale = 1f;
             isPaused = false;
-            Lowpass();
+            unpaused.TransitionTo(.01f);
       }
 
       public void Restart()
@@ -50,30 +50,21 @@ public class PauseMenu : MonoBehaviour
             time.time = 0.0f;
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            unpaused.TransitionTo(.01f);
       }
 
       public void MainMenu()
       {
             Time.timeScale = 1f;
             SceneManager.LoadScene("MainMenu");
+            unpaused.TransitionTo(.01f);
       }
 
       public void Options()
       {
-            Time.timeScale = 1f;
-            PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("Options");
-      }
-
-      void Lowpass()
-      {
-            if (Time.timeScale == 0)
-            {
-                paused.TransitionTo(.01f);
-            }
-            else
-            {
-                unpaused.TransitionTo(.01f);
-            }
+          Time.timeScale = 1f;
+          PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
+          SceneManager.LoadScene("Options");
+          unpaused.TransitionTo(.01f);
       }
 }
