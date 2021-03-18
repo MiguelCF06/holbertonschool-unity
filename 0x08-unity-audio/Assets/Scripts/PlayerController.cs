@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     audioSource = GetComponent<AudioSource>();
   }
 
-  void FixedUpdate()
+  void Update()
   {
     if (controller.isGrounded && (Input.GetButton("Horizontal") || Input.GetButton("Vertical")))
 		{

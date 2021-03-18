@@ -9138,11 +9138,6 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1795174010}
-    - target: {fileID: 403416933349445253, guid: be419828c7a5e8e4eab37978386aa4b3,
-        type: 3}
-      propertyPath: victoryClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0fc62ff4860848648a03241f59f00382, type: 3}
     - target: {fileID: 403416933349445278, guid: be419828c7a5e8e4eab37978386aa4b3,
         type: 3}
       propertyPath: m_Name
